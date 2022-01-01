@@ -16,6 +16,10 @@ public class IssueService {
     return issueRepository.findAll();
   }
 
+  public IssueEntity findById(long issueId) {
+    return issueRepository.findById(issueId);
+  }
+
   @Transactional
   public void create(String summary, String description) {
     issueRepository.insert(summary, description);
